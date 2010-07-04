@@ -1,18 +1,16 @@
 defaults: &defaults
-  host: localhost
-  # persist_in_safe_mode: true
-  
-development:
-  <<: *defaults
   host: flame.mongohq.com
   port: 27039
   username: user_test
   password: user_test
   database: event_rails_dev
+  
+development:
+  <<: *defaults
 
 test:
   <<: *defaults
-  database: control_test
+  # database: control_test
 
 # set these environment variables on your prod server
 production:
@@ -20,3 +18,6 @@ production:
   host: <%= ENV['MONGOID_HOST'] %>
   port: <%= ENV['MONGOID_PORT'] %>
   database: <%= ENV['MONGOID_DATABASE'] %>
+  
+cucumber:
+  <<: *defaults  
