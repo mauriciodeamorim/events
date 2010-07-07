@@ -8,7 +8,7 @@ describe PagesController do
     
     it "should render the about page" do
       do_get
-      response.should render_template('/pages/show/about')
+      response.should render_template('pages/show/about')
     end
   end
 end
