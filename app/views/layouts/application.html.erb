@@ -3,43 +3,31 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Web App</title>
-	<%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/drastic-dark/style", :cache => true %>
+	<%= stylesheet_link_tag "events", :cache => true %>
 </head>
 <body>
-  <div id="container">
-    <div id="header">
-      <h1><a href="/">Web App</a></h1>
-      <div id="user-navigation">
-        <ul class="wat-cf">
-          <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
-          <li><a href="#"><%= t("web-app-theme.settings", :default => "Settings") %></a></li>
-          <li><a href="/logout" class="logout"><%= t("web-app-theme.logout", :default => "Logout") %></a></li>
-        </ul>
-      </div>      
-      <div id="main-navigation">
-        <ul class="wat-cf"></ul>
-      </div>
-    </div>    
-    <div id="wrapper" class="wat-cf">
-      <div class="flash">
-        <% flash.each do |type, message| -%>
-          <div class="message <%= type %>">
-            <p><%= message %></p>
-          </div>
-        <% end -%>
-      </div>
-      <div id="main">
-        <%= yield %>
-        <div id="footer">
-          <div class="block">
-            <p>Copyright &copy; <%= Time.now.year %> Your Site.</p>
-          </div>      
-        </div>
-      </div>
-      <div id="sidebar">
-        <%= yield :sidebar %>
-      </div>
-    </div>    
+  <div id="container">   
+    <div id="content">
+	    <div id="header">
+				<h1>Eventos Ruby on Rails</h1>
+	    </div>
+			<div id="main">
+				<h2>Coluna principal</h2>
+			  <p>Dentro de main</p>
+				<ul id="nav">
+					<li class="um"><a href="#">Voltar para o tutorial</a></li>
+					<li class="um"><a href="#">Voltar para o tutorial</a></li>
+				</ul>	
+			</div>
+			<!-- <div id="aux">
+	
+			</div>		 -->
+			<div class="clear"></div>
+		</div>
+
+		<div id="footer">
+			<p>Rodap&eacute;</p>
+		</div>
   </div>
 </body>
 </html>
