@@ -2,22 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Web App</title>
+	<title>Eventos Ruby on Rails</title>
 	<%= stylesheet_link_tag "events", :cache => true %>
 </head>
 <body>
   <div id="container">   
     <div id="content">
 	    <div id="header">
-				<h1>Eventos Ruby on Rails</h1>
+				<h1 id="logo">Eventos Ruby on Rails</h1>
 	    </div>
-			<div id="main">
-				<h2>Coluna principal</h2>
-			  <p>Dentro de main</p>
-				<ul id="nav">
-					<li class="um"><a href="#">Voltar para o tutorial</a></li>
-					<li class="um"><a href="#">Voltar para o tutorial</a></li>
-				</ul>	
+			<div id="main" style="margin:20px auto;	width:700px;">
+	      <div class="flash">
+	        <% flash.each do |type, message| -%>
+	          <div class="message <%= type %>">
+	            <p><%= message %></p>
+	          </div>
+	        <% end -%>
+	      </div>	
+				<%= yield %>
 			</div>
 			<!-- <div id="aux">
 	
@@ -26,7 +28,7 @@
 		</div>
 
 		<div id="footer">
-			<p>Rodap&eacute;</p>
+			<p>Sobre</p>
 		</div>
   </div>
 </body>

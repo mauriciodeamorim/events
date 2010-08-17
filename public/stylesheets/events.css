@@ -18,7 +18,7 @@ body {
  * html #content {height: 100%;/* hack para IE6 que trata height como min-height */}
 #header {
 	background:none repeat scroll 0 0 #242424;
-	border-bottom:1px solid #999999;
+	border-bottom:5px solid #999999;
 	height:100px;
 	padding-top:1px;
 	text-align:center;
@@ -26,11 +26,11 @@ body {
 	padding-bottom:30px;
 	}
 #main {
-	width:510px;
 	padding-left:20px;
 	float:left;
-	padding-top:10px;
+	padding-top:20px;
 	text-align:justify;
+	margin-bottom: 100px;
 	}
 #aux {
 	width:200px;
@@ -39,7 +39,7 @@ body {
 	}
 #footer {
 	background:url("/images/bg_footer.gif") repeat-x scroll 0 0 transparent;
-	border-top:1px solid #999999;
+	border-top:3px solid #999999;
 	bottom:0;
 	height:40px;
 	padding-top:25px;
@@ -77,8 +77,16 @@ h1, h2, h4 {
 	color:#060;
 	}
 h4 {font-size:16px;}
+h1#logo {font-size:45px; padding-left:30px; text-align:left;}
 .clear {clear:both;}
 #nav li.um {
 	margin-bottom:8px;
 	text-align:center;
 		}
+		
+/* flash-messages */
+.flash .message {-moz-border-radius: 3px;  -webkit-border-radius: 3px;  text-align:center;  margin: 0 auto 15px;}
+	.flash .message p {  margin:8px;}
+.flash .error {  border: 1px solid #fbb;  background-color: #fdd;}
+.flash .warning {  border: 1px solid #fffaaa;  background-color: #ffffcc;}
+.flash .notice {  border: 1px solid #1FDF00;  background-color: #BBFFB6;}		
