@@ -1,9 +1,4 @@
-.DS_Store
+.bundle
+db/*.sqlite3
 log/*.log
 tmp/**/*
-tmp/*
-config/database.yml
-config/mongoid.yml
-coverage/*
-coverage.data
-*.tmproj
