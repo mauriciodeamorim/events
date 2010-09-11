@@ -1,11 +1,6 @@
 source 'http://rubygems.org'
-source 'http://gems.github.com'
 
 gem 'rails', '3.0.0'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'mysql2'
 
 # Use unicorn as the web server
@@ -26,10 +21,16 @@ gem 'ruby-debug'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-group :development, :test do
+
+# group :development, :test do
+# end
+
+group :cucumber do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
   gem 'cucumber'
-	gem 'cucumber-rails'
-	gem 'capybara'
-	gem 'rspec'
-	gem 'rspec-rails'
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
 end
