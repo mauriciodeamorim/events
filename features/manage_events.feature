@@ -7,7 +7,7 @@ Feature: Manage events
     Given I the following events RubyConf, Dev in Sampa 
     When I go to the events page
     Then I should see "RubyConf"
-    And I should see "Dev in Som"
+    And I should see "Dev in Sampa"
 
   # Rails generates Delete links that use Javascript to pop up a confirmation
   # dialog and then do a HTTP POST request (emulated DELETE request).
