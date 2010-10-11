@@ -10,8 +10,8 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-    when /the new events page/
-      new_events_path
+    when /the events page/
+      events_path
 
 
     # Add more mappings here.

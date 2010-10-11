@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 gem 'mysql2'
+gem "rails3-generators"
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -22,15 +23,13 @@ gem 'ruby-debug'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 
-# group :development, :test do
-# end
-
-group :cucumber do
+group :development, :test do
   gem 'capybara'
-  gem 'database_cleaner'
-  gem 'cucumber-rails'
   gem 'cucumber'
-  gem 'rspec-rails'
-  gem 'spork'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
   gem 'launchy'    # So you can do Then show me the page
+  gem 'rspec-core'
+  gem "rspec-rails", ">= 2.0.0.beta.20"
+  gem 'spork'
 end

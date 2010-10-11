@@ -1,11 +1,13 @@
 Feature: Manage events
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
+  In order to events list
+  As an user
+  I want to see a events list 
   
-  Scenario: Register new events
-    Given I am on the new events page
-    And I press "Create"
+  Scenario: User see events list
+    Given I the following events RubyConf, Dev in Sampa 
+    When I go to the events page
+    Then I should see "RubyConf"
+    And I should see "Dev in Som"
 
   # Rails generates Delete links that use Javascript to pop up a confirmation
   # dialog and then do a HTTP POST request (emulated DELETE request).
@@ -29,17 +31,18 @@ Feature: Manage events
   # Another way to avoid Cucumber-Rails' javascript emulation without using any
   # of the tags above is to modify your views to use <button> instead. You can
   # see how in http://github.com/jnicklas/capybara/issues#issue/12
-  #
-  Scenario: Delete events
-    Given the following events:
-      ||
-      ||
-      ||
-      ||
-      ||
-    When I delete the 3rd events
-    Then I should see the following events:
-      ||
-      ||
-      ||
-      ||
+  #  # 
+    # Scenario: Delete events
+    #   Given the following events:
+    #     ||
+    #     ||
+    #     ||
+    #     ||
+    #     ||
+    #   When I delete the 3rd events
+    #   Then I should see the following events:
+    #     ||
+    #     ||
+    #     ||
+    #     ||
+  

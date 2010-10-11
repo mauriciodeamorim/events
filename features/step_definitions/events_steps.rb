@@ -1,3 +1,7 @@
+Given /^I the following events (.+)$/ do |name|
+  name.split(', ').each {|name| Event.create(:name => name)}
+end
+
 Given /^the following events:$/ do |events|
   Events.create!(events.hashes)
 end
