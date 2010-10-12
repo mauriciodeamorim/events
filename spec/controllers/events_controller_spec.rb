@@ -10,7 +10,7 @@ describe EventsController do
     it "assigns all events as @events" do
       controller.stub(:find).with(:all).and_return([@events])
       get :index
-      assigns[:events].should == @events
+      assigns[:events].should == [@events]
     end
     
   end
